@@ -1,4 +1,4 @@
-const API_URL = 'https://api.open-meteo.com/v1/forecast';
+const API_URL = "https://api.open-meteo.com/v1/forecast";
 
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -63,8 +63,8 @@ export async function weatherSearch(lat, lng) {
   const querystring = new URLSearchParams({
     latitude: lat.toString(),
     longitude: lng.toString(),
-    hourly: 'temperature_2m,precipitation',
-    forecast_days: '1',
+    hourly: "temperature_2m,precipitation",
+    forecast_days: "1",
   });
   url.search = querystring.toString();
 
